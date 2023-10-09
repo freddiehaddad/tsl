@@ -1,7 +1,9 @@
 # TMUX Session Launcher
 
 TSL is a BASH script that launches a tmux session named after the directory
-selected from a list.
+selected from a list. Many projects are organized into directories and jumping
+between them is sometimes necessary, for example, when multiple repositories are
+used instead of a single mono repo.
 
 ## Requirements
 
