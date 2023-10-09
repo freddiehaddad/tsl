@@ -7,9 +7,11 @@
 # detached state, it will be used.
 #
 
+SOURCE_DIRECTORY="$HOME/projects/git"
+
 # Selected project directory
 project_directory=$(
-	fd . "$HOME/projects/git" \
+	fd . "$SOURCE_DIRECTORY" \
 		--min-depth 1 \
 		--max-depth 1 \
 		--type directory \
