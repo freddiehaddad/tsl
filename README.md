@@ -22,3 +22,19 @@ attached to the existing instance. If a session already exists, it will be made
 active instead of creating a new one.
 
 If `ts` is run from within tmux, a nested session will NOT be created.
+
+`ts` will look for directories (including symbolic links) inside
+`$HOME/projects/git` by default. To scan a different location, update the
+script:
+
+```bash
+# Selected project directory
+project_directory=$(
+	fd . "$HOME/projects/git" \
+		--min-depth 1 \
+		--max-depth 1 \
+		--type directory \
+		--type symlink |
+		fzf --height 20
+)
+```
